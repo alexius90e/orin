@@ -1,5 +1,5 @@
 .portfolio {
-  margin: 120px 0;
+  margin: 120px 0 80px;
   overflow: hidden;
 
   @include laptop {
@@ -7,7 +7,7 @@
   }
 
   @include mobile {
-    margin: 60px 0;
+    margin: 60px 0 40px;
   }
 
   & .title {
