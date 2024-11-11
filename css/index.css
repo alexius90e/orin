@@ -74,6 +74,26 @@ img {
   box-sizing: border-box;
 }
 
+.title {
+  margin: 0 0 80px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 120%;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .title {
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
 .first-screen {
   position: relative;
   padding: 251px 0 113px;
@@ -231,5 +251,207 @@ img {
   .first-screen__advantages-item::before {
     width: 12px;
     height: 12px;
+  }
+}
+
+.for-whom {
+  margin: 120px 0;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .for-whom {
+    margin: 80px 0;
+  }
+}
+@media (max-width: 576px) {
+  .for-whom {
+    margin: 60px 0;
+  }
+}
+.for-whom .title {
+  max-width: 830px;
+}
+.for-whom__content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1032px;
+}
+@media (max-width: 992px) {
+  .for-whom__content {
+    align-items: stretch;
+  }
+}
+@media (max-width: 576px) {
+  .for-whom__content {
+    gap: 8px;
+  }
+}
+.for-whom__content::before {
+  content: "";
+  position: absolute;
+  top: -107px;
+  left: calc(100% - 80px);
+  z-index: 10;
+  display: block;
+  width: 440px;
+  height: 613px;
+  background: url(../assets/child.webp) center/cover no-repeat;
+}
+@media (max-width: 992px) {
+  .for-whom__content::before {
+    display: none;
+  }
+}
+.for-whom__content::after {
+  content: "";
+  position: absolute;
+  top: -34px;
+  left: calc(100% - 60px);
+  z-index: -1;
+  display: block;
+  width: 786px;
+  height: 450px;
+  background: url(../assets/playgfround.webp) center/cover no-repeat;
+}
+@media (max-width: 992px) {
+  .for-whom__content::after {
+    display: none;
+  }
+}
+.for-whom__card {
+  flex: 0 0 calc(33.3333333333% - 16px);
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #ffe38a;
+}
+@media (max-width: 992px) {
+  .for-whom__card {
+    flex: 0 0 calc(50% - 12px);
+    padding: 40px 32px;
+  }
+}
+@media (max-width: 768px) {
+  .for-whom__card {
+    padding: 32px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .for-whom__card {
+    flex: 1 1 100%;
+  }
+}
+.for-whom__card_school {
+  order: 0;
+  background-color: #ffe38a;
+}
+.for-whom__card_supermarket {
+  order: 1;
+  background-color: #f2c6c0;
+}
+.for-whom__card_park {
+  order: 2;
+  background-color: #b2dada;
+}
+.for-whom__card_building {
+  order: 4;
+  background-color: #d9d3ea;
+}
+@media (max-width: 992px) {
+  .for-whom__card_building {
+    order: 3;
+  }
+}
+.for-whom__card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.for-whom__card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 60px;
+  aspect-ratio: 1/1;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .for-whom__card-figure-image {
+    width: 46px;
+  }
+}
+.for-whom__card-title {
+  margin: 24px 0;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .for-whom__card-title {
+    margin: 16px 0;
+    font-size: 20px;
+  }
+}
+.for-whom__card-text {
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .for-whom__card-text {
+    font-size: 14px;
+  }
+}
+.for-whom__info {
+  flex: 1 1 50%;
+  order: 3;
+  padding: 56px 88px;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .for-whom__info {
+    order: 4;
+  }
+}
+@media (max-width: 768px) {
+  .for-whom__info {
+    padding: 0;
+  }
+}
+.for-whom__info-text {
+  margin: 0 0 40px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .for-whom__info-text {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+}
+.for-whom__info-title {
+  max-width: 420px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .for-whom__info-title {
+    font-size: 16px;
   }
 }
