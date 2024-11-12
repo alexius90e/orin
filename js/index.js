@@ -27,3 +27,28 @@ const gallerySwiper = new Swiper('.gallery .swiper', {
     prevEl: '.gallery__controls-prev',
   },
 });
+
+const goodThumbsSwiper = new Swiper('.good-info__slider-thumbs .swiper', {
+  spaceBetween: 24,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 3.5,
+      spaceBetween: 12,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
+const goodMainSwiper = new Swiper('.good-info__slider-main .swiper', {
+  spaceBetween: 24,
+  slidesPerView: 1,
+  thumbs: {
+    swiper: goodThumbsSwiper,
+  },
+});

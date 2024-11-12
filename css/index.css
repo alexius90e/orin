@@ -1593,3 +1593,290 @@ img {
   aspect-ratio: 34/25;
   border-radius: 8px;
 }
+
+.good-info {
+  margin: 0 0 120px;
+  padding: 273px 0 0;
+  background: url(../assets/details-bg.webp) top -200px center repeat-x, linear-gradient(0deg, #fff 40%, #cfe4f2 100%);
+}
+@media (max-width: 992px) {
+  .good-info {
+    margin: 0 0 80px;
+    padding: 240px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .good-info {
+    padding: 210px 0 0;
+  }
+}
+@media (max-width: 576px) {
+  .good-info {
+    padding: 175px 0 0;
+    margin: 0 0 60px;
+  }
+}
+.good-info .title {
+  max-width: 1200px;
+}
+@media (max-width: 576px) {
+  .good-info .title {
+    font-size: 28px;
+  }
+}
+.good-info__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+@media (max-width: 1200px) {
+  .good-info__content {
+    gap: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .good-info__content {
+    display: block;
+  }
+}
+.good-info__slider {
+  flex: 0 1 auto;
+  max-width: 680px;
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  .good-info__slider {
+    max-width: 480px;
+  }
+}
+@media (max-width: 992px) {
+  .good-info__slider {
+    max-width: none;
+    margin: 0 0 40px;
+  }
+}
+.good-info__slider-main {
+  margin: 0 0 32px;
+}
+@media (max-width: 992px) {
+  .good-info__slider-main {
+    margin: 0 0 10px;
+  }
+}
+.good-info__slider-main .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7/5;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.good-info__slider-thumbs .swiper-slide img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 15/10;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.good-info__details {
+  flex: 0 1 590px;
+}
+.good-info__details-article {
+  margin: 0 0 12px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  color: #898890;
+}
+.good-info__details-text {
+  margin: 0 0 16px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .good-info__details-text {
+    font-size: 16px;
+  }
+}
+.good-info__details-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 8px;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #ffe38a;
+}
+@media (max-width: 768px) {
+  .good-info__details-info {
+    padding: 24px;
+  }
+}
+.good-info__details-info-item {
+  position: relative;
+  padding-left: 36px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .good-info__details-info-item {
+    font-size: 16px;
+  }
+}
+.good-info__details-info-item b {
+  font-weight: 700;
+}
+.good-info__details-info-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.good-info__details-info-item_size::before {
+  background-image: url(../assets/size.svg);
+}
+.good-info__details-info-item_pieces::before {
+  background-image: url(../assets/pieces.svg);
+}
+.good-info__details-info-item_weight::before {
+  background-image: url(../assets/weight.svg);
+}
+.good-info__details-form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  padding: 40px;
+  border-radius: 8px;
+  background-color: #d9d3ea;
+}
+@media (max-width: 768px) {
+  .good-info__details-form {
+    gap: 0 16px;
+    padding: 24px;
+  }
+}
+.good-info__details-form-title {
+  flex: 1 1 100%;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .good-info__details-form-title {
+    font-size: 20px;
+  }
+}
+.good-info__details-form-description {
+  flex: 1 1 100%;
+  margin: 0 0 24px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .good-info__details-form-description {
+    margin: 0 0 16px;
+    font-size: 16px;
+  }
+}
+.good-info__details-form-input {
+  flex: 1 0 auto;
+  margin: 0 0 24px;
+  padding: 8px 0 16px;
+  box-sizing: border-box;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+@media (max-width: 768px) {
+  .good-info__details-form-input {
+    margin: 0 0 16px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .good-info__details-form-input {
+    flex: 1 1 100%;
+  }
+}
+.good-info__details-form-input::-moz-placeholder {
+  color: #000;
+}
+.good-info__details-form-input::placeholder {
+  color: #000;
+}
+.good-info__details-form-submit {
+  flex: 1 0 240px;
+  max-width: 240px;
+  margin: 0 0 24px;
+  padding: 12px 32px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffe38a;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .good-info__details-form-submit {
+    margin: 0 0 16px;
+  }
+}
+@media (max-width: 576px) {
+  .good-info__details-form-submit {
+    flex-shrink: 1;
+    max-width: none;
+  }
+}
+.good-info__details-form-submit:hover {
+  background-color: #ffffff;
+}
+.good-info__details-form-disclaimer {
+  flex: 1 1 100%;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.good-info__details-form-disclaimer-link {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
