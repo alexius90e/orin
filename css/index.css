@@ -1881,6 +1881,19 @@ img {
           text-decoration-skip-ink: none;
 }
 
+.good-advantages {
+  margin: 120px 0;
+}
+@media (max-width: 992px) {
+  .good-advantages {
+    margin: 80px 0;
+  }
+}
+@media (max-width: 576px) {
+  .good-advantages {
+    margin: 60px 0;
+  }
+}
 .good-advantages__list {
   display: flex;
   flex-wrap: wrap;
@@ -1923,4 +1936,66 @@ img {
   height: 20px;
   width: 20px;
   background: url(../assets/check-green.svg) center/cover no-repeat;
+}
+
+.good-price {
+  margin: 120px 0;
+}
+@media (max-width: 992px) {
+  .good-price {
+    margin: 80px 0;
+  }
+}
+@media (max-width: 576px) {
+  .good-price {
+    margin: 60px 0;
+  }
+}
+.good-price__content {
+  overflow: auto;
+}
+.good-price__table {
+  width: 100%;
+  vertical-align: top;
+  border: none;
+}
+.good-price__table > tbody {
+  vertical-align: inherit;
+}
+.good-price__table > tbody td {
+  padding: 32px 24px 16px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+  border-bottom: 1px solid #e5e8ec;
+  white-space: nowrap;
+}
+@media (max-width: 992px) {
+  .good-price__table > tbody td {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+.good-price__table > thead {
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+.good-price__table > thead th {
+  padding: 24px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+  white-space: nowrap;
+  background-color: #cccccc;
+}
+@media (max-width: 992px) {
+  .good-price__table > thead th {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
 }
