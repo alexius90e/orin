@@ -1,2 +1,167 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 32px 0;
+
+  @include mobile {
+    padding: 16px 0;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    order: 0;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      @include desktopsm {
+        gap: 8px;
+      }
+
+      &-image {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+
+        @include desktopsm {
+          width: 90px;
+        }
+
+        @include mobile {
+          width: 65px;
+        }
+      }
+
+      &-text {
+        display: inline-block;
+        max-width: 146px;
+        font-family: 'Cera Pro', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000;
+
+        @include laptop {
+          max-width: 110px;
+          font-size: 12px;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    order: 1;
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 2;
+    }
+
+    &-link {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 12px 24px;
+      font-family: 'Cera Pro', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #000;
+      transition: background-color ease-in-out 0.2s;
+
+      @include tablet {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      &:first-child {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &.active, &:hover {
+        border-radius: 32px;
+        background-color: #ffe38a;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex: 0 0 auto;
+    gap: 8px;
+    order: 2;
+
+    @include laptop {
+      order: 1;
+    }
+
+    &-phone {
+      font-family: 'Cera Pro', sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 100%;
+      text-transform: uppercase;
+      text-align: right;
+      color: #4fb7b7;
+
+      @include desktopsm {
+        font-size: 28px;
+      }
+
+      @include laptop {
+        font-size: 24px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+
+    &-address {
+      max-width: 300px;
+      font-family: 'Cera Pro', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      text-align: right;
+      color: #000;
+
+      @include desktopsm {
+        max-width: 240px;
+        font-size: 14px;
+      }
+
+      @include tablet {
+        max-width: 200px;
+        font-size: 12px;
+      }
+    }
+  }
 }
