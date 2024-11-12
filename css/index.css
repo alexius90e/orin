@@ -49,6 +49,10 @@ body {
   background-color: #ffffff;
 }
 
+a {
+  color: inherit;
+}
+
 a,
 button,
 input,
@@ -93,6 +97,262 @@ img {
     margin-bottom: 32px;
     font-size: 24px;
   }
+}
+
+.footer {
+  padding: 210px 0 130px;
+  background: url(../assets/footer-bg.webp) top center/cover no-repeat;
+}
+@media (max-width: 992px) {
+  .footer {
+    padding: 140px 0 80px;
+  }
+}
+@media (max-width: 576px) {
+  .footer {
+    background-size: auto 100%;
+    padding: 40px 0;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  border-radius: 24px;
+  background-color: #6fc6c6;
+}
+@media (max-width: 768px) {
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.footer__contacts {
+  flex: 0 1 auto;
+  padding: 24px 24px 24px 86px;
+}
+@media (max-width: 1200px) {
+  .footer__contacts {
+    padding: 24px 40px 24px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__contacts {
+    padding: 40px 20px;
+  }
+}
+.footer__contacts-phone {
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .footer__contacts-phone {
+    font-size: 24px;
+  }
+}
+.footer__contacts-phone a {
+  color: #fff;
+}
+.footer__contacts-title {
+  margin: 32px 0 0;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .footer__contacts-title {
+    font-size: 20px;
+  }
+}
+.footer__contacts-text {
+  margin: 8px 0 0;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .footer__contacts-text {
+    font-size: 16px;
+  }
+}
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 0;
+  padding-left: 34px;
+}
+.footer__contacts-list-item {
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .footer__contacts-list-item {
+    font-size: 16px;
+  }
+}
+.footer__contacts-list-item a {
+  color: #000;
+}
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  flex: 0 2 auto;
+  max-width: 592px;
+  padding: 64px 88px 40px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background-color: #ffffff;
+}
+@media (max-width: 1200px) {
+  .footer__form {
+    max-width: 520px;
+    padding: 64px 40px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__form {
+    max-width: none;
+    width: 100%;
+    padding: 32px;
+  }
+}
+.footer__form-title {
+  margin: 0 0 24px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 992px) {
+  .footer__form-title {
+    font-size: 24px;
+  }
+}
+.footer__form-input, .footer__form-textarea {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 992px) {
+  .footer__form-input, .footer__form-textarea {
+    font-size: 16px;
+    padding-bottom: 16px;
+  }
+}
+.footer__form-input::-moz-placeholder, .footer__form-textarea::-moz-placeholder {
+  color: #000;
+}
+.footer__form-input::placeholder, .footer__form-textarea::placeholder {
+  color: #000;
+}
+.footer__form-textarea {
+  min-height: 102px;
+  resize: none;
+}
+@media (max-width: 992px) {
+  .footer__form-textarea {
+    min-height: 72px;
+  }
+}
+.footer__form-button {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 29px;
+  box-sizing: border-box;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  background: #ffe38a;
+}
+@media (max-width: 992px) {
+  .footer__form-button {
+    padding: 16px 29px;
+  }
+}
+.footer__form-disclaimer {
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer__form-disclaimer a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer__bottom {
+  padding: 40px 80px 0;
+}
+@media (max-width: 992px) {
+  .footer__bottom {
+    padding: 50px 0 0;
+  }
+}
+.footer__bottom-copyright {
+  max-width: 460px;
+  margin: 0 0 24px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .footer__bottom-copyright {
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+}
+.footer__bottom-design {
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .footer__bottom-design {
+    font-size: 12px;
+  }
+}
+.footer__bottom-design a {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
 }
 
 .first-screen {
