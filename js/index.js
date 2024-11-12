@@ -52,3 +52,32 @@ const goodMainSwiper = new Swiper('.good-info__slider-main .swiper', {
     swiper: goodThumbsSwiper,
   },
 });
+
+const goodSimilarSwiper = new Swiper('.good-similar .swiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 3.5,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+  },
+  navigation: {
+    nextEl: '.good-similar__controls-next',
+    prevEl: '.good-similar__controls-prev',
+  },
+  pagination: {
+    el: '.good-similar__controls-pagination',
+  },
+});
