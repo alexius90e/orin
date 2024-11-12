@@ -14,7 +14,16 @@ const portfolioSwiper = new Swiper('.portfolio .swiper', {
     prevEl: '.portfolio__controls-prev',
   },
   pagination: {
-    el: ".portfolio__controls-pagination",
-    type: "fraction",
+    el: '.portfolio__controls-pagination',
+    type: 'fraction',
+  },
+});
+
+const gallerySwiper = new Swiper('.gallery .swiper', {
+  slidesPerView: 'auto',
+  loop: true,
+  navigation: {
+    nextEl: '.gallery__controls-next',
+    prevEl: '.gallery__controls-prev',
   },
 });

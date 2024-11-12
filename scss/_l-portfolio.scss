@@ -167,8 +167,9 @@
     &-next {
       flex: 0 0 auto;
       width: 42px;
-      height: 7px;
+      height: 24px;
       background: url(../assets/next.svg) center no-repeat;
+      cursor: pointer;
     }
 
     &-prev {

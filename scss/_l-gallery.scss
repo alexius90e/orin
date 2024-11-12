@@ -1,0 +1,156 @@
+.gallery {
+  position: relative;
+  margin: 120px 0;
+  padding: 40px 0 0;
+  overflow: hidden;
+
+  @include laptop {
+    margin: 80px 0;
+    padding: 40px 0 88px;
+  }
+
+  @include mobile {
+    margin: 60px 0;
+  }
+
+  &__tag {
+    position: absolute;
+    top: 124px;
+    left: 50%;
+    z-index: 20;
+    max-width: 400px;
+    padding: 25px 0 25px 116px;
+    box-sizing: border-box;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 80%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #6fc6c6;
+    transform: rotate(-90deg) translate3d(0, -1020px, 0);
+
+    @media screen and (max-width: 1780px) {
+      transform: rotate(-90deg) translate3d(-300px, -820px, 0);
+    }
+
+    @include desktop {
+      position: relative;
+      top: auto;
+      left: auto;
+      padding: 20px 0 20px 40px;
+      margin: 0 -20px 32px;
+      font-size: 32px;
+      transform: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 81px;
+      background: url(../assets/circles-bg.svg) top left / 46px repeat;
+
+      @include desktop {
+        width: 32px;
+        background-size: 40px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 64px;
+  }
+
+  &__description {
+    max-width: 680px;
+    font-family: 'Cera Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #000;
+
+    @include laptop {
+      max-width: none;
+    }
+  }
+
+  &__controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    gap: 24px;
+    height: 64px;
+
+    @include laptop {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      display: block;
+      height: 64px;
+      width: 64px;
+      border-radius: 64px;
+      background-color: #b2dada;
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    &-prev,
+    &-next {
+      flex: 0 0 auto;
+      width: 152px;
+      height: 32px;
+      background: url(../assets/next-long.svg) right center / 152px no-repeat;
+      cursor: pointer;
+
+      @include mobile {
+        width: 132px;
+      }
+    }
+
+    &-prev {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__slider {
+    margin-top: 76px;
+
+    @include laptop {
+      margin-top: 34px;
+    }
+
+    & .swiper {
+      &-slide {
+        width: fit-content;
+
+        & img {
+          display: inline-block;
+          max-width: 100%;
+          height: 600px;
+          object-fit: cover;
+
+          @include tablet {
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
