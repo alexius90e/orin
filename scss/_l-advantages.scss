@@ -1,0 +1,127 @@
+.advantages {
+  margin: 120px 0;
+  padding: 32px 0;
+
+  @include desktopsm {
+    padding: 0;
+  }
+
+  @include laptop {
+    margin: 80px 0;
+  }
+
+  @include mobile {
+    margin: 60px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 120px;
+
+    @include desktopsm {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__info {
+    flex: 0 1 504px;
+
+    @include desktopsm {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__card {
+    position: relative;
+    min-height: 64px;
+    padding-left: 88px;
+    margin: 40px 0 0;
+
+    &-figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+      }
+    }
+
+    &-title {
+      margin: 0 0 4px;
+      font-family: 'Cera Pro', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: #000;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      margin: 0;
+      font-family: 'Cera Pro', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: #000;
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 680px;
+    margin: 0 auto;
+
+    @include desktopsm {
+      flex: 0 1 auto;
+      flex-direction: column;
+      width: 100%;
+      max-width: 680px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -32px;
+      left: -88px;
+      bottom: -32px;
+      display: block;
+      height: calc(100% + 64px);
+      aspect-ratio: 152 / 696;
+      background: url(../assets/pink-tag-v.svg) center / cover no-repeat;
+
+      @include desktopsm {
+        position: static;
+        width: calc(100% + 40px);
+        height: auto;
+        margin: 0 -20px;
+        aspect-ratio: 696 / 152;
+        background-image: url(../assets/pink-tag-h.svg);
+      }
+    }
+
+    & iframe {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 34 / 25;
+      border-radius: 8px;
+    }
+  }
+}

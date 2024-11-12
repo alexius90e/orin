@@ -1034,3 +1034,131 @@ img {
 .steps .order-catalog__form-submit:hover {
   background-color: #ffffff;
 }
+
+.advantages {
+  margin: 120px 0;
+  padding: 32px 0;
+}
+@media (max-width: 1200px) {
+  .advantages {
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  .advantages {
+    margin: 80px 0;
+  }
+}
+@media (max-width: 576px) {
+  .advantages {
+    margin: 60px 0;
+  }
+}
+.advantages__content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 120px;
+}
+@media (max-width: 1200px) {
+  .advantages__content {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+.advantages__info {
+  flex: 0 1 504px;
+}
+@media (max-width: 1200px) {
+  .advantages__info {
+    flex: 0 1 auto;
+  }
+}
+.advantages__card {
+  position: relative;
+  min-height: 64px;
+  padding-left: 88px;
+  margin: 40px 0 0;
+}
+.advantages__card-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.advantages__card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.advantages__card-title {
+  margin: 0 0 4px;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .advantages__card-title {
+    font-size: 16px;
+  }
+}
+.advantages__card-text {
+  margin: 0;
+  font-family: "Cera Pro", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .advantages__card-text {
+    font-size: 14px;
+  }
+}
+.advantages__video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 1 680px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .advantages__video {
+    flex: 0 1 auto;
+    flex-direction: column;
+    width: 100%;
+    max-width: 680px;
+  }
+}
+.advantages__video::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  left: -88px;
+  bottom: -32px;
+  display: block;
+  height: calc(100% + 64px);
+  aspect-ratio: 152/696;
+  background: url(../assets/pink-tag-v.svg) center/cover no-repeat;
+}
+@media (max-width: 1200px) {
+  .advantages__video::before {
+    position: static;
+    width: calc(100% + 40px);
+    height: auto;
+    margin: 0 -20px;
+    aspect-ratio: 696/152;
+    background-image: url(../assets/pink-tag-h.svg);
+  }
+}
+.advantages__video iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 34/25;
+  border-radius: 8px;
+}
