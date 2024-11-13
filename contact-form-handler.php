@@ -15,6 +15,7 @@
       // CRLF Injection attack protection
       $name = strip_crlf($name);
       $email = strip_crlf($email);
+      $phone = strip_crlf($phone);
       if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
           echo "The email address is invalid.";
       } else {

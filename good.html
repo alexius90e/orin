@@ -112,7 +112,9 @@
                 </div>
                 <input
                   class="good-info__details-form-input"
-                  type="phone"
+                  id="goodPhone"
+                  name="phone"
+                  type="tel"
                   placeholder="+7"
                   required
                 />
@@ -433,15 +435,26 @@
 
           <form class="footer__form">
             <div class="footer__form-title">напишите нам</div>
-            <input class="footer__form-input" type="text" placeholder="Имя *" required />
             <input
               class="footer__form-input"
+              id="footerName"
+              name="name"
               type="text"
+              placeholder="Имя *"
+              required
+            />
+            <input
+              class="footer__form-input"
+              id="footerPhone"
+              name="phone"
+              type="tel"
               placeholder="Телефон для связи *"
               required
             />
             <textarea
               class="footer__form-textarea"
+              id="footerMessage"
+              name="message"
               placeholder="Ваши комментарии/вопросы"
             ></textarea>
             <button class="footer__form-button">Отправить сообщение</button>

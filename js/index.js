@@ -81,3 +81,74 @@ const goodSimilarSwiper = new Swiper('.good-similar .swiper', {
     el: '.good-similar__controls-pagination',
   },
 });
+
+const orderForms = document.querySelectorAll('.order-catalog__form');
+
+orderForms.forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const name = formData.has('name') ? formData.get('name') : '';
+    const email = formData.has('email') ? formData.get('email') : '';
+    const phone = formData.has('phone') ? formData.get('phone') : '';
+    const subject = 'Заказать каталог фигур';
+    const content = formData.has('message') ? formData.get('message') : '';
+
+    form.reset();
+
+    fetch('../contact-form-handler.php', {
+      method: 'POST',
+      data: { name, email, phone, subject, content },
+    }).then(() => form.reset());
+  });
+});
+
+const footerForms = document.querySelectorAll('.footer__form');
+
+footerForms.forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const name = formData.has('name') ? formData.get('name') : '';
+    const email = formData.has('email') ? formData.get('email') : '';
+    const phone = formData.has('phone') ? formData.get('phone') : '';
+    const subject = 'Напишите нам';
+    const content = formData.has('message') ? formData.get('message') : '';
+
+    form.reset();
+
+    fetch('../contact-form-handler.php', {
+      method: 'POST',
+      data: { name, email, phone, subject, content },
+    }).then(() => form.reset());
+  });
+});
+
+const goodInfoForms = document.querySelectorAll('.good-info__details-form');
+
+goodInfoForms.forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const name = formData.has('name') ? formData.get('name') : '';
+    const email = formData.has('email') ? formData.get('email') : '';
+    const phone = formData.has('phone') ? formData.get('phone') : '';
+    const subject = 'Консультация';
+    const content = formData.has('message') ? formData.get('message') : '';
+
+    console.log(name, email, phone, subject, content);
+
+    form.reset();
+
+    fetch('../contact-form-handler.php', {
+      method: 'POST',
+      data: { name, email, phone, subject, content },
+    }).then(() => form.reset());
+  });
+});

@@ -59,9 +59,19 @@
   }
 
   &__card {
+    position: relative;
     padding: 25px 24px 32px;
     border: 1px solid #e5e8ec;
     border-radius: 8px;
+    
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
 
     &-figure {
       display: flex;
