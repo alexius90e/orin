@@ -1633,7 +1633,13 @@ img {
 .good-info {
   margin: 0 0 120px;
   padding: 273px 0 0;
-  background: url(../assets/details-bg.webp) top -200px center repeat-x, linear-gradient(0deg, #fff 40%, #cfe4f2 100%);
+  background: url(../assets/details-bg.webp) top center/cover no-repeat;
+}
+@media screen and (max-width: 1920px) {
+  .good-info {
+    background-size: 1920px;
+    background-repeat: no-repeat;
+  }
 }
 @media (max-width: 992px) {
   .good-info {
@@ -1707,6 +1713,12 @@ img {
   aspect-ratio: 7/5;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.good-info__slider-thumbs .swiper-slide {
+  border: 1px solid rgba(137, 136, 144, 0);
+}
+.good-info__slider-thumbs .swiper-slide-thumb-active {
+  border: 1px solid #898890;
 }
 .good-info__slider-thumbs .swiper-slide img {
   display: block;
@@ -2015,9 +2027,21 @@ img {
   }
 }
 .good-price__table > thead {
+  position: relative;
   text-align: left;
   vertical-align: middle;
   border-radius: 8px;
+}
+.good-price__table > thead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 8px;
+  background-color: #e5e8ec;
 }
 .good-price__table > thead th {
   padding: 24px;
@@ -2027,7 +2051,6 @@ img {
   line-height: 160%;
   color: #000;
   white-space: nowrap;
-  background-color: #cccccc;
 }
 @media (max-width: 992px) {
   .good-price__table > thead th {

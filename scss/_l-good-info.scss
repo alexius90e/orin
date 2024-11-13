@@ -1,8 +1,12 @@
 .good-info {
   margin: 0 0 120px;
   padding: 273px 0 0;
-  background: url(../assets/details-bg.webp) top -200px center repeat-x,
-    linear-gradient(0deg, #fff 40%, #cfe4f2 100%);
+  background: url(../assets/details-bg.webp) top center / cover no-repeat;
+
+  @media screen and (max-width: 1920px) {
+    background-size: 1920px;
+    background-repeat: no-repeat;
+  }
 
   @include laptop {
     margin: 0 0 80px;
@@ -63,6 +67,8 @@
 
       & .swiper {
         &-slide {
+          
+
           & img {
             display: block;
             max-width: 100%;
@@ -78,6 +84,13 @@
     &-thumbs {
       & .swiper {
         &-slide {
+          border: 1px solid rgba($color: #898890, $alpha: 0);
+
+          &-thumb-active {
+            border: 1px solid rgba($color: #898890, $alpha: 1);
+          }
+
+
           & img {
             display: block;
             max-width: 100%;
