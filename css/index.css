@@ -194,6 +194,7 @@ img {
   font-size: 16px;
   line-height: 160%;
   color: #000;
+  border-radius: 32px;
   transition: background-color ease-in-out 0.2s;
 }
 @media (max-width: 768px) {
@@ -202,14 +203,19 @@ img {
     font-size: 12px;
   }
 }
+.header__nav-link:hover {
+  background-color: #ffe38a;
+}
 @media (max-width: 576px) {
   .header__nav-link:first-child {
     display: none;
   }
 }
-.header__nav-link.active, .header__nav-link:hover {
-  border-radius: 32px;
+.header__nav-link.active {
   background-color: #ffe38a;
+}
+.header__nav-link.active:hover {
+  background-color: #ffd859;
 }
 .header__contacts {
   display: flex;

@@ -90,11 +90,16 @@
       font-size: 16px;
       line-height: 160%;
       color: #000;
+      border-radius: 32px;
       transition: background-color ease-in-out 0.2s;
 
       @include tablet {
         padding: 8px 10px;
         font-size: 12px;
+      }
+
+      &:hover {
+        background-color: #ffe38a;
       }
 
       &:first-child {
@@ -103,9 +108,12 @@
         }
       }
 
-      &.active, &:hover {
-        border-radius: 32px;
+      &.active {
         background-color: #ffe38a;
+
+        &:hover {
+          background-color: #ffd859;
+        }
       }
     }
   }
