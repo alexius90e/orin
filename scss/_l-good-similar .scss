@@ -104,14 +104,14 @@
   }
 
   &__controls {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin: 24px 0 0;
 
     @include tablet {
-      display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      margin: 24px 0 0;
     }
 
     &-prev,
@@ -121,6 +121,10 @@
       height: 24px;
       background: url(../assets/next.svg) center no-repeat;
       cursor: pointer;
+
+      &.swiper-button-disabled {
+        opacity: 0.2;
+      }
     }
 
     &-prev {
@@ -133,6 +137,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 16px;
+      width: auto !important;
       font-family: 'Cera Pro', sans-serif;
       font-weight: 400;
       font-size: 16px;
